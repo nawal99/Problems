@@ -1,0 +1,111 @@
+\documentclass[10pt]{article}
+\usepackage{color,latexsym,setspace,graphicx,amsmath,amsfonts,amssymb,amsthm,enumerate,mathtools,adjustbox,ragged2e}
+\usepackage[margin=.6in]{geometry}
+\renewcommand{\baselinestretch}{1.4}
+\usepackage{tcolorbox}
+\usepackage{color}
+\usepackage{mdframed}
+\usepackage[T1]{fontenc}
+
+
+\newenvironment{question}[1][]{\medskip \refstepcounter{section} \noindent  \textbf{\textcolor{red}{Question \thesection.}}\ }{ \smallskip \par}
+\newenvironment{solution}[1][]{\smallskip \noindent {\textit{{Solution}.}\ }}{ \noindent \hfill $\square$  \smallskip \par}
+
+
+
+\begin{document}
+
+\begin{mdframed}
+    \begin{question}{}
+        If for a function $f:\mathbb{R}\to \mathbb{R}$ image of each compact set is compact then $f$ is continous. T/F.
+    \end{question}
+    \begin{solution}
+        No, we can take the function $$f=\begin{cases}
+            sin(\frac{1}{x})\ \text{if}\ x\neq 0,\\
+            0\ \text{else}.\end{cases}$$
+        This function is discontinous at 0.
+    \end{solution}
+\end{mdframed}
+
+\begin{mdframed}
+    \begin{question}
+        Existence of the limit $\lim_{n\to \infty} \frac{1}{1}+\frac{1}{2}+\dots+\frac{1}{n}-\text{log}n.$
+    \end{question}
+    \begin{solution}
+        Let $x_n= \frac{1}{1}+\frac{1}{2}+\dots+\frac{1}{n}-{log}n$. Then $x_{n+1}-x_n=\frac{1}{n+1}-log(\frac{n+1}{n}).$ But $log(1+x)\geq \frac{x}{x+1}$. Thus the sequence is decreasing and we can show(!) that it is bounded below.
+    \end{solution}
+\end{mdframed}
+
+
+\begin{mdframed}
+    \begin{question}
+        What is the smallest positive real numer $c$ such that $||x||_1\leq c||x||_{\infty}$ for all $x\in \mathbb{R}^n$.
+    \end{question}
+    \begin{solution}
+        Clearly $||x||_1\leq n||x||_\infty.$ Now, we claim that $c=n$. Let if possible $||x||_1\leq (n-\epsilon)||x||_\infty$ for some $\epsilon>0$, for all $x\in \mathbb{R}^n$. But for $x=(1,1,\dots,1)$ we will have $||x||_1=n, ||x||_\infty=1$ and hence $||x||>||x||_\infty.$
+    \end{solution}
+\end{mdframed}
+
+
+\begin{mdframed}
+    \begin{question}
+        If a group is finitely generated then there exist atmost finitely many subgroup of any index.
+    \end{question}
+    \begin{solution}
+        Let us consider $G$ be the group and $H$ be its subgroup such that $[G:H]=n.$ The group acts on the cosets $\{H,g_2H,\dots,g_nH\}=\{1,2,3,\dots,n\}$ and it induces a homomorphism \begin{center}
+            $\varphi_H:G \to S_n$ such that $g\mapsto_{\varphi_H} \sigma_g$.
+        \end{center} Now the stabilizer of the element $H$ in $G/H$ can be identified as $\{g\in G\mid \sigma_g=1\}$ i.e., $\{g\in G \mid gg_iH=g_iH, 1\leq i\leq n\}$ i.e., $H$. We claim that different subgroups $H$ and $H'$ will induce different maps. For $h\in H, h\notin H'$ we have $\varphi_H(h)=1$ but $\varphi_{H'}(h)\neq 1$. Again there are atmost finitely many maps from $G$ to $S_n$ and hence as a result there can exist only finite many subgroups of index $n$.
+    \end{solution}
+\end{mdframed} 
+
+\begin{mdframed}
+    \begin{question}{}
+        For primes $p>q>2$, group of order $pq^2$ contains a subgroup of ordre $pq$. 
+    \end{question}
+    \begin{solution}
+        The number of sylow $p$ subgroup $n_p$ divides $q^2$ as well as $p\mid n_p-1.$ Now $n_p$ is odd if it is equal to $q$ or $q^2$. Since $p$ is also an odd prime we can not have $p\mid n_p-1$ in this case. Thus we must have $n_p=1$ i.e., the sylow$-p$ subgroup, $H$ in $G$ is normal and has order $p$. Now by Cauchy's theorem there exists $b\in G$ of order $q$. Let $K=<b>$. Then $HK$ is the desired subgroup of $G$. 
+    \end{solution}
+\end{mdframed}
+
+\newpage
+
+\begin{mdframed}
+    \begin{question}{}
+        $SL_n$ is a product of matrices of the form $E_{ij}(a)=I+a\delta_{ij},1\leq i\neq j\leq n$.
+    \end{question}
+    \begin{solution}
+        Clearly $E_{ij}(a)\in SL_n$ and 
+        \[\delta_{ij}\delta_{kl}=\begin{cases*}
+            \delta_{il} &\ if $j=k$,\\
+            0 &\ else.
+        \end{cases*} \]
+        implies \begin{align*}
+            E_{ij}(a)E_{ij}(-a)&=(I+a\delta_{ij})(I-a\delta_{ij}) \\
+            &=I-a^2\delta_{ij}\delta_{ij}\\
+            &=I.
+        \end{align*}
+        For $A\in SL_n$, since not all entries in the first column can be zero we must have $a_{i1}\neq 0$ and $E_{1i}(1)A=(I+\delta_{1i})A=A+$ 
+    \end{solution}
+\end{mdframed}
+
+\begin{mdframed}
+    \begin{question}
+        $X$ be a compact metric space with atleast two points and $a\in X$. Then 
+        \begin{enumerate}
+            \item either $X\smallsetminus\{a\}$ is compact or $X$ is connected,
+            \item but not both.
+        \end{enumerate}
+    \end{question}
+    \begin{solution}
+        \begin{enumerate}
+            \item Let us assume that $A=X\smallsetminus\{a\}$ is not compact then we know $A$ is not closed.
+
+            \item Let us assume that $X$ is connected and if possible $X\smallsetminus\{a\}$ is compact. Then $X\smallsetminus\{a\}$ is closed. Also $\{a\}$ is a closed subset of $X$. This contradicts that $X=(X\smallsetminus\{a\})\cup\{a\}$ is connected. 
+        
+            Conversely if $A=X\smallsetminus\{a\}$ is compact then it will be closed in $X$ and we will have $X=A\cup B$, for $B=\{a\}$. Thus $X$ is not connected.
+        \end{enumerate}
+    \end{solution}
+\end{mdframed}
+
+
+\end{document}
