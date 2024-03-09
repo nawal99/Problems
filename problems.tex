@@ -1,16 +1,21 @@
-\documentclass[10pt]{article}
+\documentclass[12pt]{article}
 \usepackage{color,latexsym,setspace,graphicx,amsmath,amsfonts,amssymb,amsthm,enumerate,mathtools,adjustbox,ragged2e,hyperref}
 \usepackage[margin=.6in]{geometry}
 \renewcommand{\baselinestretch}{1.4}
 \usepackage{tcolorbox}
 \usepackage{color}
 \usepackage{mdframed}
+\usepackage{mathpazo}
+\usepackage{domitian}
 \usepackage[T1]{fontenc}
+\let\oldstylenums\oldstyle
 \mdfsetup{nobreak=true}
 
 \newcommand{\bb}{\mathbb}
 
-\newenvironment{problem}[1][]{\medskip \refstepcounter{section} \noindent  {\textcolor{red}{Problem \thesection.}}\ \addcontentsline{toc}{subsection}{Problem \thesection}}{ \smallskip \par}
+\newenvironment{problem}[1][]{\medskip \refstepcounter{section} \noindent  
+\textbf{Problem \thesection.}\def\pnm{#1}
+\ifstrempty{#1}{}{(\textcolor{red}{#1})} \addcontentsline{toc}{subsection}{Problem \thesection - \ifstrempty{#1}{}{#1}}}{ \smallskip \par}
 \newenvironment{solution}[1][]{\smallskip \noindent {\textit{{Solution}.}\ }}{ \noindent \hfill $\square$  \smallskip \par}
 
 
@@ -20,8 +25,9 @@
 \tableofcontents
 \newpage
 
+
 \begin{mdframed}
-    \begin{problem}{}
+    \begin{problem}[Analysis]
         If for a function $f:\mathbb{R}\to \mathbb{R}$ image of each compact set is compact then $f$ is continous. T/F.
     \end{problem}
     \begin{solution}
@@ -64,7 +70,7 @@
 \end{mdframed} 
 
 \begin{mdframed}
-    \begin{problem}{}
+    \begin{problem}
         For primes $p>q>2$, group of order $pq^2$ contains a subgroup of ordre $pq$. 
     \end{problem}
     \begin{solution}
@@ -73,7 +79,7 @@
 \end{mdframed}
 
 \begin{mdframed}
-    \begin{problem}{}
+    \begin{problem}
         $SL_n$ is a product of matrices of the form $E_{ij}(a)=I+a\delta_{ij},1\leq i\neq j\leq n$.
     \end{problem}
     \begin{solution}
@@ -130,7 +136,7 @@
 \end{mdframed}
 
 \begin{mdframed}
-    \begin{problem}
+    \begin{problem}[Matrix, Topology]
         Show that $SL_2(\bb{R})$ is connected.
     \end{problem}
     \begin{solution}
