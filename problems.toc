@@ -1,5 +1,3 @@
-\contentsline {subsection}{\numberline {0.1}}{2}{subsection.0.1}%
-\contentsline {subsection}{\numberline {0.2}}{2}{subsection.0.2}%
 \contentsline {subsection}{Problem 1.\ (\textcolor {red}{Analysis})}{2}{section.1}%
 \contentsline {subsection}{Problem 2.}{2}{section.2}%
 \contentsline {subsection}{Problem 3.}{2}{section.3}%

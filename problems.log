@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.6)  9 MAR 2024 23:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.6)  10 MAR 2024 00:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1049,73 +1049,69 @@ LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
  [1
 
 {C:/Users/nkh79/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/ly1/texnansi.enc}]
-LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 13.82408pt on input line 28.
-LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 13.82408pt on input line 28.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 31.
+(mdframed)              on input line 29.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 11.52008pt on input line 31.
+(Font)              scaled to size 11.52008pt on input line 29.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 11.52008pt on input line 35.
+(Font)              scaled to size 11.52008pt on input line 33.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 36.
+(Font)              scaled to size 7.68005pt on input line 34.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 36.
+(Font)              scaled to size 5.76004pt on input line 34.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 43.
+(mdframed)              on input line 41.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 53.
+(mdframed)              on input line 51.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 63.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 74.
+(mdframed)              on input line 72.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 81.
  [2]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 83.
+(mdframed)              on input line 100.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 102.
+(mdframed)              on input line 120.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 122.
+(mdframed)              on input line 129.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 131.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 140.
+(mdframed)              on input line 138.
  [3]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 149.
+(mdframed)              on input line 147.
  [4] (problems.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
 Package rerunfilecheck Info: File `problems.out' has not changed.
-(rerunfilecheck)             Checksum: 78FCAB2762FE26C2057A192524067872;1323.
+(rerunfilecheck)             Checksum: F058456D48A79137B27E39D88D2CD496;1241.
  ) 
 Here is how much of TeX's memory you used:
- 24606 strings out of 475551
- 456301 string characters out of 5762555
- 1935238 words of memory out of 5000000
- 45309 multiletter control sequences out of 15000+600000
- 596107 words of font info for 101 fonts, out of 8000000 for 9000
+ 24598 strings out of 475551
+ 456191 string characters out of 5762555
+ 1938238 words of memory out of 5000000
+ 45305 multiletter control sequences out of 15000+600000
+ 591105 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,10n,93p,585b,606s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,10n,93p,585b,598s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr7t.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr7v.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr7y.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr8t.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdbch/md-chri7m.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdbch/md-chrma.pfb>
-Output written on problems.pdf (4 pages, 88694 bytes).
+Output written on problems.pdf (4 pages, 87607 bytes).
 PDF statistics:
- 146 PDF objects out of 1000 (max. 8388607)
- 22 named destinations out of 1000 (max. 500000)
- 117 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 136 PDF objects out of 1000 (max. 8388607)
+ 20 named destinations out of 1000 (max. 500000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
