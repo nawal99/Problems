@@ -1,24 +1,29 @@
 \documentclass[10pt]{article}
-\usepackage{color,latexsym,setspace,graphicx,amsmath,amsfonts,amssymb,amsthm,enumerate,mathtools,adjustbox,ragged2e}
+\usepackage{color,latexsym,setspace,graphicx,amsmath,amsfonts,amssymb,amsthm,enumerate,mathtools,adjustbox,ragged2e,hyperref}
 \usepackage[margin=.6in]{geometry}
 \renewcommand{\baselinestretch}{1.4}
 \usepackage{tcolorbox}
 \usepackage{color}
 \usepackage{mdframed}
 \usepackage[T1]{fontenc}
+\mdfsetup{nobreak=true}
 
+\newcommand{\bb}{\mathbb}
 
-\newenvironment{question}[1][]{\medskip \refstepcounter{section} \noindent  \textbf{\textcolor{red}{Question \thesection.}}\ }{ \smallskip \par}
+\newenvironment{problem}[1][]{\medskip \refstepcounter{section} \noindent  {\textcolor{red}{Problem \thesection.}}\ \addcontentsline{toc}{subsection}{Problem \thesection}}{ \smallskip \par}
 \newenvironment{solution}[1][]{\smallskip \noindent {\textit{{Solution}.}\ }}{ \noindent \hfill $\square$  \smallskip \par}
 
 
 
 \begin{document}
 
+\tableofcontents
+\newpage
+
 \begin{mdframed}
-    \begin{question}{}
+    \begin{problem}{}
         If for a function $f:\mathbb{R}\to \mathbb{R}$ image of each compact set is compact then $f$ is continous. T/F.
-    \end{question}
+    \end{problem}
     \begin{solution}
         No, we can take the function $$f=\begin{cases}
             sin(\frac{1}{x})\ \text{if}\ x\neq 0,\\
@@ -28,9 +33,9 @@
 \end{mdframed}
 
 \begin{mdframed}
-    \begin{question}
+    \begin{problem}
         Existence of the limit $\lim_{n\to \infty} \frac{1}{1}+\frac{1}{2}+\dots+\frac{1}{n}-\text{log}n.$
-    \end{question}
+    \end{problem}
     \begin{solution}
         Let $x_n= \frac{1}{1}+\frac{1}{2}+\dots+\frac{1}{n}-{log}n$. Then $x_{n+1}-x_n=\frac{1}{n+1}-log(\frac{n+1}{n}).$ But $log(1+x)\geq \frac{x}{x+1}$. Thus the sequence is decreasing and we can show(!) that it is bounded below.
     \end{solution}
@@ -38,9 +43,9 @@
 
 
 \begin{mdframed}
-    \begin{question}
+    \begin{problem}
         What is the smallest positive real numer $c$ such that $||x||_1\leq c||x||_{\infty}$ for all $x\in \mathbb{R}^n$.
-    \end{question}
+    \end{problem}
     \begin{solution}
         Clearly $||x||_1\leq n||x||_\infty.$ Now, we claim that $c=n$. Let if possible $||x||_1\leq (n-\epsilon)||x||_\infty$ for some $\epsilon>0$, for all $x\in \mathbb{R}^n$. But for $x=(1,1,\dots,1)$ we will have $||x||_1=n, ||x||_\infty=1$ and hence $||x||>||x||_\infty.$
     \end{solution}
@@ -48,9 +53,9 @@
 
 
 \begin{mdframed}
-    \begin{question}
+    \begin{problem}
         If a group is finitely generated then there exist atmost finitely many subgroup of any index.
-    \end{question}
+    \end{problem}
     \begin{solution}
         Let us consider $G$ be the group and $H$ be its subgroup such that $[G:H]=n.$ The group acts on the cosets $\{H,g_2H,\dots,g_nH\}=\{1,2,3,\dots,n\}$ and it induces a homomorphism \begin{center}
             $\varphi_H:G \to S_n$ such that $g\mapsto_{\varphi_H} \sigma_g$.
@@ -59,20 +64,18 @@
 \end{mdframed} 
 
 \begin{mdframed}
-    \begin{question}{}
+    \begin{problem}{}
         For primes $p>q>2$, group of order $pq^2$ contains a subgroup of ordre $pq$. 
-    \end{question}
+    \end{problem}
     \begin{solution}
         The number of sylow $p$ subgroup $n_p$ divides $q^2$ as well as $p\mid n_p-1.$ Now $n_p$ is odd if it is equal to $q$ or $q^2$. Since $p$ is also an odd prime we can not have $p\mid n_p-1$ in this case. Thus we must have $n_p=1$ i.e., the sylow$-p$ subgroup, $H$ in $G$ is normal and has order $p$. Now by Cauchy's theorem there exists $b\in G$ of order $q$. Let $K=<b>$. Then $HK$ is the desired subgroup of $G$. 
     \end{solution}
 \end{mdframed}
 
-\newpage
-
 \begin{mdframed}
-    \begin{question}{}
+    \begin{problem}{}
         $SL_n$ is a product of matrices of the form $E_{ij}(a)=I+a\delta_{ij},1\leq i\neq j\leq n$.
-    \end{question}
+    \end{problem}
     \begin{solution}
         Clearly $E_{ij}(a)\in SL_n$ and 
         \[\delta_{ij}\delta_{kl}=\begin{cases*}
@@ -89,13 +92,13 @@
 \end{mdframed}
 
 \begin{mdframed}
-    \begin{question}
+    \begin{problem}
         $X$ be a compact metric space with atleast two points and $a\in X$. Then 
         \begin{enumerate}
             \item either $X\smallsetminus\{a\}$ is compact or $X$ is connected,
             \item but not both.
         \end{enumerate}
-    \end{question}
+    \end{problem}
     \begin{solution}
         \begin{enumerate}
             \item Let us assume that $A=X\smallsetminus\{a\}$ is not compact then we know $A$ is not closed.
@@ -107,5 +110,43 @@
     \end{solution}
 \end{mdframed}
 
+
+\begin{mdframed}
+    \begin{problem}
+        $GL^{+}_n(\bb{R})$ and $GL^{-}_n(\bb{R})$ are homeomorphic.
+    \end{problem}
+    \begin{solution}
+        We can define $\psi: GL^{+}_n(\bb{R})\to GL^{-}_n(\bb{R})$ such that $\psi(M)=AM$, where $A$ is a diagonal matrix such that $a_{11}=-1$ and $a_{ii}=1$ for $1<i\leq n.$ 
+    \end{solution}
+\end{mdframed}
+
+\begin{mdframed}
+    \begin{problem}
+        Show that the General Linear group with positive determinant, $GL^{+}_n(\bb{R})$ is connected.
+    \end{problem}
+    \begin{solution}
+        We know that $GL^{+}_n(\bb{R})=\det^{-1}((0,\infty))$ and hence it is open. If we can show that this there is some kind of homeomorphism we are through. 
+    \end{solution}
+\end{mdframed}
+
+\begin{mdframed}
+    \begin{problem}
+        Show that $SL_2(\bb{R})$ is connected.
+    \end{problem}
+    \begin{solution}
+        Here we will use the fact that the General Linear group with positive determinant, $GL^{+}_n(\bb{R})$ is path connected. With the help of this fact we can define a continous map \[\phi:GL^{+}_n(\bb{R})\to SL_n(\bb{R})\] such that \[\phi(A)=\frac{A}{(\det(A))^{\frac{1}{n}}}.\] Clearly this is a surjection and hence $SL_n(\bb{R})$ is connected.
+    \end{solution}
+\end{mdframed}
+
+\begin{mdframed}
+    \begin{problem}
+        $f:\bb{R}\to \bb{R}$ is continous. Then show that $f$ is open iff it is strictly monotone.
+    \end{problem}
+    \begin{solution}
+        Let us assume that $f$ is open and if possible there exist $a<b<c$ such that $f(a)<f(b)>f(c)$. Now if we restrict $f$ to the interval $[a,c]$, then its supremum, $M$ will exist and $M$ will strictly be greater than $f(a),f(c)$ i.e., $f([a,c])=[m,M]$. Therefore $f((a,c))$ will be a half closed interval i.e., either $f((a,c))=[m,M]$ or $f((a,c))=(m.M])$, contradicting our assumption that the map $f$ is open. 
+
+        Conversely WLOG let us assume that $f$ is strictly increasing. It is sufficient to show that $f$ maps open intetrval to open sets. Now, $f$ being continous and strictly increasing implies $f((a,b))=(f(a),f(b)).$
+    \end{solution}
+\end{mdframed}
 
 \end{document}
