@@ -12,17 +12,31 @@
 \newcommand{\bb}{\mathbb}
 
 \newenvironment{problem}[1][]{\medskip \refstepcounter{section} \noindent  
-\textbf{Problem \thesection.}\def\pnm{#1}\ifstrempty{#1}{}{\ (\textcolor{red}{#1})} \addcontentsline{toc}{subsection}{Problem \thesection.\ifstrempty{#1}{}{\ (\textcolor{red}{#1})}}}{ \smallskip \par}
+\textbf{Problem \thesection.}\def\pnm{#1}\ifstrempty{#1}{}{\ (\textcolor{red}{#1})} \addcontentsline{toc}{subsection}{Problem \thesection.\ }}{ \smallskip \par}
+
 \newenvironment{solution}[1][]{\smallskip \noindent {\textit{{Solution}.}\ }}{ \noindent \hfill $\square$  \smallskip \par}
 
 \usepackage{tocloft}
-\renewcommand{\cftdot}{.\ }
+\renewcommand{\contentsname}{\hfill\bfseries\Large Contents \hfill}   
+\renewcommand{\cftaftertoctitle}{\hfill}
+%\renewcommand{\cftdot}{}
 
+\usepackage{titlesec,multicol}
+
+\newcommand*{\setupTOC}{}
 
 \begin{document}
 
 
-\tableofcontents
+\begin{center}
+    \LARGE Collection of Problems\\
+    \large Nawal Kishor Hazarika
+\end{center}
+\vspace{2cm}
+\begin{multicols}{3}
+    {\setupTOC  \tableofcontents}
+\end{multicols}
+    
 \newpage
 
 \begin{mdframed}

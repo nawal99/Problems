@@ -1,11 +1,11 @@
-\contentsline {subsection}{Problem 1.\ (\textcolor {red}{Analysis})}{2}{section.1}%
-\contentsline {subsection}{Problem 2.}{2}{section.2}%
-\contentsline {subsection}{Problem 3.}{2}{section.3}%
-\contentsline {subsection}{Problem 4.}{2}{section.4}%
-\contentsline {subsection}{Problem 5.}{2}{section.5}%
-\contentsline {subsection}{Problem 6.}{3}{section.6}%
-\contentsline {subsection}{Problem 7.}{3}{section.7}%
-\contentsline {subsection}{Problem 8.}{3}{section.8}%
-\contentsline {subsection}{Problem 9.}{3}{section.9}%
-\contentsline {subsection}{Problem 10.\ (\textcolor {red}{Matrix, Topology})}{4}{section.10}%
-\contentsline {subsection}{Problem 11.}{4}{section.11}%
+\contentsline {subsection}{Problem 1.\ }{2}{section.1}%
+\contentsline {subsection}{Problem 2.\ }{2}{section.2}%
+\contentsline {subsection}{Problem 3.\ }{2}{section.3}%
+\contentsline {subsection}{Problem 4.\ }{2}{section.4}%
+\contentsline {subsection}{Problem 5.\ }{2}{section.5}%
+\contentsline {subsection}{Problem 6.\ }{3}{section.6}%
+\contentsline {subsection}{Problem 7.\ }{3}{section.7}%
+\contentsline {subsection}{Problem 8.\ }{3}{section.8}%
+\contentsline {subsection}{Problem 9.\ }{3}{section.9}%
+\contentsline {subsection}{Problem 10.\ }{4}{section.10}%
+\contentsline {subsection}{Problem 11.\ }{4}{section.11}%

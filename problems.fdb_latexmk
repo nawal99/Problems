@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1710010033 "c:/Users/nkh79/Documents/Latex/Problems/problems.tex" "problems.pdf" "problems" 1710010036 0
-  "C:/Users/nkh79/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1710005781 188718 058e483e39dc61bf1f46ae5c572ed102 ""
+["pdflatex"] 1710013684 "c:/Users/nkh79/Documents/Latex/Problems/problems.tex" "problems.pdf" "problems" 1710013689 0
+  "C:/Users/nkh79/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1710013148 188718 058e483e39dc61bf1f46ae5c572ed102 ""
   "C:/Users/nkh79/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1709743757 24118870 43b467708b50911374e7a80a5c9fd285 ""
   "C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/ly1/texnansi.enc" 1654972639 6938 5135be6a8802f13a7faf296d1959a1ab ""
   "C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/tfm/mathdesign/mdbch/md-chb8t.tfm" 1377794278 992 33850081be99bee4bb0c1c617edf8cd3 ""
@@ -197,9 +197,11 @@
   "C:/Users/nkh79/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "C:/Users/nkh79/AppData/Local/Programs/MiKTeX/tex/latex/setspace/setspace.sty" 1670403145 22490 8cac309b79a4c53a4ffce4b1b07aead0 ""
   "C:/Users/nkh79/AppData/Local/Programs/MiKTeX/tex/latex/tcolorbox/tcolorbox.sty" 1687177930 100847 2039ed7ec53e75714414926bcbaa0ca4 ""
+  "C:/Users/nkh79/AppData/Local/Programs/MiKTeX/tex/latex/titlesec/titlesec.sty" 1699094857 48766 0b93839be28e9744a24c45075c75b2e2 ""
   "C:/Users/nkh79/AppData/Local/Programs/MiKTeX/tex/latex/tocloft/tocloft.sty" 1578908763 37263 3e78d14f0f4b1a30560fea5e04de805d ""
   "C:/Users/nkh79/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty" 1686255640 10214 75bcd28386d4b4b9f28b2aff3cea7b24 ""
   "C:/Users/nkh79/AppData/Local/Programs/MiKTeX/tex/latex/tools/enumerate.sty" 1686255640 3468 a25a09d5c0a232a2d82e47496071c7fa ""
+  "C:/Users/nkh79/AppData/Local/Programs/MiKTeX/tex/latex/tools/multicol.sty" 1686255640 32515 51caec75eda9c8890135f12f1a4eddc3 ""
   "C:/Users/nkh79/AppData/Local/Programs/MiKTeX/tex/latex/tools/verbatim.sty" 1686255640 7392 ed69c044ab18d5539723c1c7b8c2ee88 ""
   "C:/Users/nkh79/AppData/Local/Programs/MiKTeX/tex/latex/trimspaces/trimspaces.sty" 1253169183 1380 971a51b00a14503ddf754cab24c3f209 ""
   "C:/Users/nkh79/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
@@ -208,11 +210,11 @@
   "C:/Users/nkh79/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/nkh79/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/nkh79/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
-  "c:/Users/nkh79/Documents/Latex/Problems/problems.tex" 1710010032 7832 49e0d5dff5b65604f280ef3057884f18 ""
-  "problems.aux" 1710010036 1743 7d67b5711e332ee5a7dca5b1337cbbea "pdflatex"
-  "problems.out" 1710010036 1241 f058456d48a79137b27e39d88d2cd496 "pdflatex"
-  "problems.tex" 1710010032 7832 49e0d5dff5b65604f280ef3057884f18 ""
-  "problems.toc" 1710010036 666 f6426990f3a09a2b6b6c741ae97ba117 "pdflatex"
+  "c:/Users/nkh79/Documents/Latex/Problems/problems.tex" 1710013683 8144 f53a6404c6752c13e594512a9dcbf379 ""
+  "problems.aux" 1710013688 1697 69b7e3ef4c9e6e0e12be119a64d0c511 "pdflatex"
+  "problems.out" 1710013688 1158 2920b6e823be9d50550c711ea7091d15 "pdflatex"
+  "problems.tex" 1710013683 8144 f53a6404c6752c13e594512a9dcbf379 ""
+  "problems.toc" 1710013688 620 a33960584644bf024134211f65e5fa09 "pdflatex"
   (generated)
   "problems.aux"
   "problems.log"
