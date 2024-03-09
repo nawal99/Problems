@@ -1,31 +1,32 @@
 \documentclass[12pt]{article}
 \usepackage{color,latexsym,setspace,graphicx,amsmath,amsfonts,amssymb,amsthm,enumerate,mathtools,adjustbox,ragged2e,hyperref}
-\usepackage[margin=.6in]{geometry}
-\renewcommand{\baselinestretch}{1.4}
+\usepackage[margin=.7in]{geometry}
+\renewcommand{\baselinestretch}{1.15}
 \usepackage{tcolorbox}
 \usepackage{color}
 \usepackage{mdframed}
-\usepackage{mathpazo}
-\usepackage{domitian}
+\usepackage[bitstream-charter]{mathdesign}
 \usepackage[T1]{fontenc}
-\let\oldstylenums\oldstyle
 \mdfsetup{nobreak=true}
 
 \newcommand{\bb}{\mathbb}
 
 \newenvironment{problem}[1][]{\medskip \refstepcounter{section} \noindent  
-\textbf{Problem \thesection.}\def\pnm{#1}
-\ifstrempty{#1}{}{(\textcolor{red}{#1})} \addcontentsline{toc}{subsection}{Problem \thesection - \ifstrempty{#1}{}{#1}}}{ \smallskip \par}
+\textbf{Problem \thesection.}\def\pnm{#1}\ifstrempty{#1}{}{\ (\textcolor{red}{#1})} \addcontentsline{toc}{subsection}{Problem \thesection.\ifstrempty{#1}{}{\ (\textcolor{red}{#1})}}}{ \smallskip \par}
 \newenvironment{solution}[1][]{\smallskip \noindent {\textit{{Solution}.}\ }}{ \noindent \hfill $\square$  \smallskip \par}
 
+\usepackage{tocloft}
+\renewcommand{\cftdot}{.\ }
 
 
 \begin{document}
 
+
 \tableofcontents
 \newpage
 
-
+\subsection{}
+\subsection{}
 \begin{mdframed}
     \begin{problem}[Analysis]
         If for a function $f:\mathbb{R}\to \mathbb{R}$ image of each compact set is compact then $f$ is continous. T/F.
