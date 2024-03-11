@@ -1,20 +1,43 @@
 \documentclass[12pt]{article}
 \usepackage{color,latexsym,setspace,graphicx,amsmath,amsfonts,amssymb,amsthm,enumerate,mathtools,adjustbox,ragged2e,hyperref}
 \usepackage[margin=.7in]{geometry}
-\renewcommand{\baselinestretch}{1.15}
+\renewcommand{\baselinestretch}{1.1}
 \usepackage{tcolorbox}
 \usepackage{color}
 \usepackage{mdframed}
-\usepackage[bitstream-charter]{mathdesign}
+\usepackage{libertine}
+%\usepackage{libertinust1math}
 \usepackage[T1]{fontenc}
 \mdfsetup{nobreak=true}
 
 \newcommand{\bb}{\mathbb}
+\newcommand{\sylow}{\textit{sylow}}
+\newcommand{\spec}{\text{Spec}}
+\newcommand{\Spec}{\text{Spec}}
+\newcommand{\mf}{\mathfrak{m}}
+\newcommand{\mfv}{\mathfrak{m}_v}
+\newcommand{\ab}{\mathbb{A}}
+\newcommand{\cbb}{\mathbb{C}}
+\newcommand{\pf}{\mathfrak{p}}
+\newcommand{\qf}{\mathfrak{q}}
+\newcommand{\rf}{\mathfrak{r}}
+\newcommand{\af}{\mathfrak{a}}
+\newcommand{\qb}{\mathbb{Q}}
+\newcommand{\subs}{\subseteq}
+\newcommand{\sups}{\supseteq}
+\newcommand{\oline}{\overline}
+\newcommand{\pr}{A[x_1,x_2,\dots,x_n]}
+\newcommand{\vphi}{\varphi}
+\newcommand{\zb}{\mathbb{Z}}
+\newcommand{\kn}{k[X_1,X_2,\dots,X_n]}
+\newcommand{\km}{k[X_1,X_2,\dots,X_m]}
+\newcommand{\xn}{X \subseteq \ab_k^n}
+\newcommand{\ym}{X \subseteq \ab_k^m}
 
 \newenvironment{problem}[1][]{\medskip \refstepcounter{section} \noindent  
-\textbf{Problem \thesection.}\def\pnm{#1}\ifstrempty{#1}{}{\ (\textcolor{red}{#1})} \addcontentsline{toc}{subsection}{Problem \thesection.\ }}{ \smallskip \par}
+\textbf{\scshape{Problem} \thesection.}\def\pnm{#1}\ifstrempty{#1}{}{\ (\textcolor{red}{#1})} \addcontentsline{toc}{subsection}{Problem \thesection.\ }\itshape}{ \smallskip \par}
 
-\newenvironment{solution}[1][]{\smallskip \noindent {\textit{{Solution}.}\ }}{ \noindent \hfill $\square$  \smallskip \par}
+\newenvironment{solution}[1][]{\smallskip \noindent {\textit{{Solution}.}\ }}{ \noindent \hfill $\square$  \medskip \vspace{1.5cm} \par}
 
 \usepackage{tocloft}
 \renewcommand{\contentsname}{\hfill\bfseries\Large Contents \hfill}   
@@ -33,13 +56,13 @@
     \large Nawal Kishor Hazarika
 \end{center}
 \vspace{2cm}
-\begin{multicols}{3}
+\begin{multicols}{2}
     {\setupTOC  \tableofcontents}
 \end{multicols}
     
 \newpage
 
-\begin{mdframed}
+
     \begin{problem}[Analysis]
         If for a function $f:\mathbb{R}\to \mathbb{R}$ image of each compact set is compact then $f$ is continous. T/F.
     \end{problem}
@@ -49,49 +72,49 @@
             0\ \text{else}.\end{cases}$$
         This function is discontinous at 0.
     \end{solution}
-\end{mdframed}
 
-\begin{mdframed}
+
+
     \begin{problem}
         Existence of the limit $\lim_{n\to \infty} \frac{1}{1}+\frac{1}{2}+\dots+\frac{1}{n}-\text{log}n.$
     \end{problem}
     \begin{solution}
         Let $x_n= \frac{1}{1}+\frac{1}{2}+\dots+\frac{1}{n}-{log}n$. Then $x_{n+1}-x_n=\frac{1}{n+1}-log(\frac{n+1}{n}).$ But $log(1+x)\geq \frac{x}{x+1}$. Thus the sequence is decreasing and we can show(!) that it is bounded below.
     \end{solution}
-\end{mdframed}
 
 
-\begin{mdframed}
+
+
     \begin{problem}
         What is the smallest positive real numer $c$ such that $||x||_1\leq c||x||_{\infty}$ for all $x\in \mathbb{R}^n$.
     \end{problem}
     \begin{solution}
         Clearly $||x||_1\leq n||x||_\infty.$ Now, we claim that $c=n$. Let if possible $||x||_1\leq (n-\epsilon)||x||_\infty$ for some $\epsilon>0$, for all $x\in \mathbb{R}^n$. But for $x=(1,1,\dots,1)$ we will have $||x||_1=n, ||x||_\infty=1$ and hence $||x||>||x||_\infty.$
     \end{solution}
-\end{mdframed}
 
 
-\begin{mdframed}
+
+
     \begin{problem}
-        If a group is finitely generated then there exist atmost finitely many subgroup of any index.
+        If a group is finitely generated then show that there exist atmost finitely many subgroup of any given index.
     \end{problem}
     \begin{solution}
         Let us consider $G$ be the group and $H$ be its subgroup such that $[G:H]=n.$ The group acts on the cosets $\{H,g_2H,\dots,g_nH\}=\{1,2,3,\dots,n\}$ and it induces a homomorphism \begin{center}
             $\varphi_H:G \to S_n$ such that $g\mapsto_{\varphi_H} \sigma_g$.
         \end{center} Now the stabilizer of the element $H$ in $G/H$ can be identified as $\{g\in G\mid \sigma_g=1\}$ i.e., $\{g\in G \mid gg_iH=g_iH, 1\leq i\leq n\}$ i.e., $H$. We claim that different subgroups $H$ and $H'$ will induce different maps. For $h\in H, h\notin H'$ we have $\varphi_H(h)=1$ but $\varphi_{H'}(h)\neq 1$. Again there are atmost finitely many maps from $G$ to $S_n$ and hence as a result there can exist only finite many subgroups of index $n$.
     \end{solution}
-\end{mdframed} 
+ 
 
-\begin{mdframed}
+
     \begin{problem}
         For primes $p>q>2$, group of order $pq^2$ contains a subgroup of ordre $pq$. 
     \end{problem}
     \begin{solution}
         The number of sylow $p$ subgroup $n_p$ divides $q^2$ as well as $p\mid n_p-1.$ Now $n_p$ is odd if it is equal to $q$ or $q^2$. Since $p$ is also an odd prime we can not have $p\mid n_p-1$ in this case. Thus we must have $n_p=1$ i.e., the sylow$-p$ subgroup, $H$ in $G$ is normal and has order $p$. Now by Cauchy's theorem there exists $b\in G$ of order $q$. Let $K=<b>$. Then $HK$ is the desired subgroup of $G$. 
     \end{solution}
-\end{mdframed}
 
-\begin{mdframed}
+
+
     \begin{problem}
         $SL_n$ is a product of matrices of the form $E_{ij}(a)=I+a\delta_{ij},1\leq i\neq j\leq n$.
     \end{problem}
@@ -108,9 +131,9 @@
         \end{align*}
         For $A\in SL_n$, since not all entries in the first column can be zero we must have $a_{i1}\neq 0$ and $E_{1i}(1)A=(I+\delta_{1i})A=A+$ 
     \end{solution}
-\end{mdframed}
 
-\begin{mdframed}
+
+
     \begin{problem}
         $X$ be a compact metric space with atleast two points and $a\in X$. Then 
         \begin{enumerate}
@@ -127,37 +150,37 @@
             Conversely if $A=X\smallsetminus\{a\}$ is compact then it will be closed in $X$ and we will have $X=A\cup B$, for $B=\{a\}$. Thus $X$ is not connected.
         \end{enumerate}
     \end{solution}
-\end{mdframed}
 
 
-\begin{mdframed}
+
+
     \begin{problem}
         $GL^{+}_n(\bb{R})$ and $GL^{-}_n(\bb{R})$ are homeomorphic.
     \end{problem}
     \begin{solution}
         We can define $\psi: GL^{+}_n(\bb{R})\to GL^{-}_n(\bb{R})$ such that $\psi(M)=AM$, where $A$ is a diagonal matrix such that $a_{11}=-1$ and $a_{ii}=1$ for $1<i\leq n.$ 
     \end{solution}
-\end{mdframed}
 
-\begin{mdframed}
+
+
     \begin{problem}
         Show that the General Linear group with positive determinant, $GL^{+}_n(\bb{R})$ is connected.
     \end{problem}
     \begin{solution}
         We know that $GL^{+}_n(\bb{R})=\det^{-1}((0,\infty))$ and hence it is open. If we can show that this there is some kind of homeomorphism we are through. 
     \end{solution}
-\end{mdframed}
 
-\begin{mdframed}
+
+
     \begin{problem}[Matrix, Topology]
         Show that $SL_2(\bb{R})$ is connected.
     \end{problem}
     \begin{solution}
         Here we will use the fact that the General Linear group with positive determinant, $GL^{+}_n(\bb{R})$ is path connected. With the help of this fact we can define a continous map \[\phi:GL^{+}_n(\bb{R})\to SL_n(\bb{R})\] such that \[\phi(A)=\frac{A}{(\det(A))^{\frac{1}{n}}}.\] Clearly this is a surjection and hence $SL_n(\bb{R})$ is connected.
     \end{solution}
-\end{mdframed}
 
-\begin{mdframed}
+
+
     \begin{problem}
         $f:\bb{R}\to \bb{R}$ is continous. Then show that $f$ is open iff it is strictly monotone.
     \end{problem}
@@ -166,6 +189,32 @@
 
         Conversely WLOG let us assume that $f$ is strictly increasing. It is sufficient to show that $f$ maps open intetrval to open sets. Now, $f$ being continous and strictly increasing implies $f((a,b))=(f(a),f(b)).$
     \end{solution}
-\end{mdframed}
+
+
+
+    \begin{problem}[Group Theory, Sylow Theorems]
+        What is the number of $\sylow-p$ subgroups in $GL_n(\bb{F}_p)$. 
+    \end{problem}
+    \begin{solution}
+        We have $|G|=|GL_n(\bb{F}_p)|=(p^n-1)(p^n-p)\dots(p^n-p^{n-1})$. Therefore the cardinality of a $\sylow-p$ subgroup in $G$ is $p^{1+2+\cdots+(n-1)}=p^{\frac{(n-1)n}{2}}$. Now the subgroup $H$ of $G$ consisting of the upper triangular matrices with diagonal entries 1 is a $\sylow-p$ subgroup of $G$. Thus the number of $\sylow-p$ subgroup is same as the index of the normalizer of $H$ in $G$. We claim \[N=
+        \left\{ A\in G\mid a_{ii}\neq 0, a_{ij}=0 \text{\ for \ }  i<j \right\}\] is equal to $N_H(G)$. $N\subs N_H(G)$ is obvious. 
+        
+        To proof the other direction we have to do some work. We have \[N = \left\{\begin{bmatrix}
+            a_{11} & a_{12} & a_{13} & \dots & a_{1,n-1} & a_{1n}\\
+            0 & a_{22} & a_{23}  & \dots &a_{2,n-1} & a_{2n}\\
+            &&&\ddots\\
+            0 & 0 & 0  & \dots &a_{n-1,n-1} & a_{n-1,n}\\
+            0 & 0 & 0 & \dots & 0 & a_{nn}\\
+            \end{bmatrix}
+            \mid a_{ij} \in F_{p}, a_{ii} \ne 0 \right\}.
+            \]
+            Let us consider the subspace $V_i=\langle e_1,e_2,\dots,e_i \rangle$. It is clear that $HV_i\subs V_i.$ \textbf{First} we claim that this are the only subspaces such that $HU\subs U.$ If $u=(u_1,u_2,\dots,u_n)^t$ is some basis vector of $U$ with say $u_i\neq 0$. WLOG we can assume $u_i=1$. Now for $j\leq i$ \[ (I+\delta_{ji})u=(u_1,u_2,\dots,u_j+u_i,\dots,u_n)^t.\] Thus $(u_1,u_2,\dots,u_j+u_i,\dots,u_n)-(u_1,u_2,\dots,u_j,\dots,u_n)=(0,0,\dots,u_i,\dots,0)=e_j$ is contained in $U$. Therefore we can conclude that $U=V_j$, where $j$ is largest index such that a basis vector has a nonzero $j$th entry.
+
+            Now for any $g\in N_G(H)$ and $h\in H$, $ghg^{-1}\in H.$ Therefore $gh=h'g$ for some $h'\in H.$ Again we claim $hV_i=V_i$ foe each $i$. Since $he_i=(h_{1i},h_{2i},\dots,h_{ni})^t$, $he_1=(h_{1i},0,\dots,0)=e_1$. Again $he_2=(h_{12},1,\dots,0)^t=h_{12}e_1+e_2$ i.e., \[he_2-h(h_{12}e_1)=e_2\in hV_i.\] By this way we have $hV_i=V_i$. Therefore $ghV_i=gV_i=h(gV_i)$ i.e. $h(gV_i)\subs gV_i$ and $H(gV_i)\subs gV_i.$ From our first claim we have $gV_i=V_j$ for some $1\leq j\leq n$. Since $g$ is invertible and it preserves rank we must have $gV_i=V_i$ for each $1\leq i \leq n$. Thus we have $g\in N$ by simple observation.
+
+
+
+    \end{solution}
+
 
 \end{document}
