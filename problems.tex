@@ -63,6 +63,7 @@
 \newpage
 
 
+\begin{mdframed}
     \begin{problem}[Analysis]
         If for a function $f:\mathbb{R}\to \mathbb{R}$ image of each compact set is compact then $f$ is continous. T/F.
     \end{problem}
@@ -72,29 +73,34 @@
             0\ \text{else}.\end{cases}$$
         This function is discontinous at 0.
     \end{solution}
+\end{mdframed}
 
 
-
+\begin{mdframed}
     \begin{problem}
         Existence of the limit $\lim_{n\to \infty} \frac{1}{1}+\frac{1}{2}+\dots+\frac{1}{n}-\text{log}n.$
     \end{problem}
     \begin{solution}
         Let $x_n= \frac{1}{1}+\frac{1}{2}+\dots+\frac{1}{n}-{log}n$. Then $x_{n+1}-x_n=\frac{1}{n+1}-log(\frac{n+1}{n}).$ But $log(1+x)\geq \frac{x}{x+1}$. Thus the sequence is decreasing and we can show(!) that it is bounded below.
     \end{solution}
+\end{mdframed}
 
 
 
 
+\begin{mdframed}
     \begin{problem}
         What is the smallest positive real numer $c$ such that $||x||_1\leq c||x||_{\infty}$ for all $x\in \mathbb{R}^n$.
     \end{problem}
     \begin{solution}
         Clearly $||x||_1\leq n||x||_\infty.$ Now, we claim that $c=n$. Let if possible $||x||_1\leq (n-\epsilon)||x||_\infty$ for some $\epsilon>0$, for all $x\in \mathbb{R}^n$. But for $x=(1,1,\dots,1)$ we will have $||x||_1=n, ||x||_\infty=1$ and hence $||x||>||x||_\infty.$
     \end{solution}
+\end{mdframed}
 
 
 
 
+\begin{mdframed}
     \begin{problem}
         If a group is finitely generated then show that there exist atmost finitely many subgroup of any given index.
     \end{problem}
@@ -103,18 +109,22 @@
             $\varphi_H:G \to S_n$ such that $g\mapsto_{\varphi_H} \sigma_g$.
         \end{center} Now the stabilizer of the element $H$ in $G/H$ can be identified as $\{g\in G\mid \sigma_g=1\}$ i.e., $\{g\in G \mid gg_iH=g_iH, 1\leq i\leq n\}$ i.e., $H$. We claim that different subgroups $H$ and $H'$ will induce different maps. For $h\in H, h\notin H'$ we have $\varphi_H(h)=1$ but $\varphi_{H'}(h)\neq 1$. Again there are atmost finitely many maps from $G$ to $S_n$ and hence as a result there can exist only finite many subgroups of index $n$.
     \end{solution}
+\end{mdframed}
  
 
 
+\begin{mdframed}
     \begin{problem}
         For primes $p>q>2$, group of order $pq^2$ contains a subgroup of ordre $pq$. 
     \end{problem}
     \begin{solution}
         The number of sylow $p$ subgroup $n_p$ divides $q^2$ as well as $p\mid n_p-1.$ Now $n_p$ is odd if it is equal to $q$ or $q^2$. Since $p$ is also an odd prime we can not have $p\mid n_p-1$ in this case. Thus we must have $n_p=1$ i.e., the sylow$-p$ subgroup, $H$ in $G$ is normal and has order $p$. Now by Cauchy's theorem there exists $b\in G$ of order $q$. Let $K=<b>$. Then $HK$ is the desired subgroup of $G$. 
     \end{solution}
+\end{mdframed}
 
 
 
+\begin{mdframed}
     \begin{problem}
         $SL_n$ is a product of matrices of the form $E_{ij}(a)=I+a\delta_{ij},1\leq i\neq j\leq n$.
     \end{problem}
@@ -131,9 +141,11 @@
         \end{align*}
         For $A\in SL_n$, since not all entries in the first column can be zero we must have $a_{i1}\neq 0$ and $E_{1i}(1)A=(I+\delta_{1i})A=A+$ 
     \end{solution}
+\end{mdframed}
 
 
 
+\begin{mdframed}
     \begin{problem}
         $X$ be a compact metric space with atleast two points and $a\in X$. Then 
         \begin{enumerate}
@@ -150,37 +162,45 @@
             Conversely if $A=X\smallsetminus\{a\}$ is compact then it will be closed in $X$ and we will have $X=A\cup B$, for $B=\{a\}$. Thus $X$ is not connected.
         \end{enumerate}
     \end{solution}
+\end{mdframed}
 
 
 
 
+\begin{mdframed}
     \begin{problem}
         $GL^{+}_n(\bb{R})$ and $GL^{-}_n(\bb{R})$ are homeomorphic.
     \end{problem}
     \begin{solution}
         We can define $\psi: GL^{+}_n(\bb{R})\to GL^{-}_n(\bb{R})$ such that $\psi(M)=AM$, where $A$ is a diagonal matrix such that $a_{11}=-1$ and $a_{ii}=1$ for $1<i\leq n.$ 
     \end{solution}
+\end{mdframed}
 
 
 
+\begin{mdframed}
     \begin{problem}
         Show that the General Linear group with positive determinant, $GL^{+}_n(\bb{R})$ is connected.
     \end{problem}
     \begin{solution}
         We know that $GL^{+}_n(\bb{R})=\det^{-1}((0,\infty))$ and hence it is open. If we can show that this there is some kind of homeomorphism we are through. 
     \end{solution}
+\end{mdframed}
 
 
 
+\begin{mdframed}
     \begin{problem}[Matrix, Topology]
         Show that $SL_2(\bb{R})$ is connected.
     \end{problem}
     \begin{solution}
         Here we will use the fact that the General Linear group with positive determinant, $GL^{+}_n(\bb{R})$ is path connected. With the help of this fact we can define a continous map \[\phi:GL^{+}_n(\bb{R})\to SL_n(\bb{R})\] such that \[\phi(A)=\frac{A}{(\det(A))^{\frac{1}{n}}}.\] Clearly this is a surjection and hence $SL_n(\bb{R})$ is connected.
     \end{solution}
+\end{mdframed}
 
 
 
+\begin{mdframed}
     \begin{problem}
         $f:\bb{R}\to \bb{R}$ is continous. Then show that $f$ is open iff it is strictly monotone.
     \end{problem}
@@ -189,9 +209,11 @@
 
         Conversely WLOG let us assume that $f$ is strictly increasing. It is sufficient to show that $f$ maps open intetrval to open sets. Now, $f$ being continous and strictly increasing implies $f((a,b))=(f(a),f(b)).$
     \end{solution}
+\end{mdframed}
 
 
 
+\begin{mdframed}
     \begin{problem}[Group Theory, Sylow Theorems]
         What is the number of $\sylow-p$ subgroups in $GL_n(\bb{F}_p)$. 
     \end{problem}
@@ -215,6 +237,7 @@
 
 
     \end{solution}
+\end{mdframed}
 
 
 \end{document}
