@@ -1,14 +1,21 @@
-\documentclass[12pt]{article}
-\usepackage{color,latexsym,setspace,graphicx,amsmath,amsfonts,amssymb,amsthm,enumerate,mathtools,adjustbox,ragged2e,hyperref}
-\usepackage[margin=.7in]{geometry}
-\renewcommand{\baselinestretch}{1.1}
+\documentclass[11pt]{article}
+\usepackage{color,latexsym,setspace,graphicx,amsmath,amsfonts,amssymb,amsthm,enumerate,quiver,mathtools,adjustbox,ragged2e}
+\usepackage[margin=1in]{geometry}
+\usepackage[colorlinks,linkcolor=newgreen]{hyperref}
 \usepackage{tcolorbox}
 \usepackage{color}
 \usepackage{mdframed}
-\usepackage{libertine}
-%\usepackage{libertinust1math}
+
+
+\usepackage[bitstream-charter]{mathdesign}
 \usepackage[T1]{fontenc}
+\renewcommand{\baselinestretch}{1.2}
+
 \mdfsetup{nobreak=true}
+
+\definecolor{newgreen}{RGB}{0,150,0}
+\definecolor{newtoc}{RGB}{0,51,102} %color definitions
+\definecolor{ngrey}{RGB}{64,64,64}
 
 \newcommand{\bb}{\mathbb}
 \newcommand{\sylow}{\textit{sylow}}
@@ -34,21 +41,25 @@
 \newcommand{\xn}{X \subseteq \ab_k^n}
 \newcommand{\ym}{X \subseteq \ab_k^m}
 
-\newenvironment{problem}[1][]{\medskip \refstepcounter{section} \noindent  
-\textbf{\scshape{Problem} \thesection.}\def\pnm{#1}\ifstrempty{#1}{}{\ (\textcolor{red}{#1})} \addcontentsline{toc}{subsection}{Problem \thesection.\ }\itshape}{ \smallskip \par}
+
+
+\newenvironment{problem}[1][]{\medskip \refstepcounter{section} \noindent  $\S$ 
+{\scshape{\textcolor{newgreen}{Problem \thesection.}}}\def\pnm{#1}\ifstrempty{#1}{}{\ (\textcolor{red}{#1})} \addcontentsline{toc}{subsection}{\scshape{Problem} \thesection.\ }\itshape}{ \smallskip \par}
 
 \newenvironment{solution}[1][]{\smallskip \noindent {\textit{{Solution}.}\ }}{ \noindent \hfill $\square$  \medskip \vspace{1.5cm} \par}
 
 \usepackage{tocloft}
-\renewcommand{\contentsname}{\hfill\bfseries\Large Contents \hfill}   
-\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\contentsname}{}
 %\renewcommand{\cftdot}{}
 
 \usepackage{titlesec,multicol}
 
+
+
 \newcommand*{\setupTOC}{}
 
 \begin{document}
+
 
 
 \begin{center}
@@ -56,75 +67,71 @@
     \large Nawal Kishor Hazarika
 \end{center}
 \vspace{2cm}
+
+\begin{center}
+    \bfseries\Large \textcolor{newtoc}{Contents}
+\end{center}
 \begin{multicols}{2}
-    {\setupTOC  \tableofcontents}
+    {\setupTOC  \begingroup
+    \hypersetup{linkcolor=newtoc}
+    \tableofcontents
+    \endgroup}
 \end{multicols}
     
 \newpage
 
-
-\begin{mdframed}
     \begin{problem}[Analysis]
         If for a function $f:\mathbb{R}\to \mathbb{R}$ image of each compact set is compact then $f$ is continous. T/F.
     \end{problem}
     \begin{solution}
-        No, we can take the function $$f=\begin{cases}
-            sin(\frac{1}{x})\ \text{if}\ x\neq 0,\\
-            0\ \text{else}.\end{cases}$$
+        No, we can take the function \[f=\begin{cases}
+            \sin\left(\frac{1}{x}\right)\ \text{if}\ x\neq 0,\\
+            0\ \text{else}.\end{cases}\]
         This function is discontinous at 0.
     \end{solution}
-\end{mdframed}
 
 
-\begin{mdframed}
+
     \begin{problem}
-        Existence of the limit $\lim_{n\to \infty} \frac{1}{1}+\frac{1}{2}+\dots+\frac{1}{n}-\text{log}n.$
+        Existence of the limit $\lim_{n\to \infty} \frac{1}{1}+\frac{1}{2}+\dots+\frac{1}{n}-{\log}n.$
     \end{problem}
     \begin{solution}
-        Let $x_n= \frac{1}{1}+\frac{1}{2}+\dots+\frac{1}{n}-{log}n$. Then $x_{n+1}-x_n=\frac{1}{n+1}-log(\frac{n+1}{n}).$ But $log(1+x)\geq \frac{x}{x+1}$. Thus the sequence is decreasing and we can show(!) that it is bounded below.
+        Let $x_n= \frac{1}{1}+\frac{1}{2}+\dots+\frac{1}{n}-{log}n$. Then $x_{n+1}-x_n=\frac{1}{n+1}-log(\frac{n+1}{n}).$ But $\log(1+x)\geq \frac{x}{x+1}$. Thus the sequence is decreasing and we can show(!) that it is bounded below.
     \end{solution}
-\end{mdframed}
 
 
 
 
-\begin{mdframed}
     \begin{problem}
         What is the smallest positive real numer $c$ such that $||x||_1\leq c||x||_{\infty}$ for all $x\in \mathbb{R}^n$.
     \end{problem}
     \begin{solution}
         Clearly $||x||_1\leq n||x||_\infty.$ Now, we claim that $c=n$. Let if possible $||x||_1\leq (n-\epsilon)||x||_\infty$ for some $\epsilon>0$, for all $x\in \mathbb{R}^n$. But for $x=(1,1,\dots,1)$ we will have $||x||_1=n, ||x||_\infty=1$ and hence $||x||>||x||_\infty.$
     \end{solution}
-\end{mdframed}
 
 
 
 
-\begin{mdframed}
     \begin{problem}
         If a group is finitely generated then show that there exist atmost finitely many subgroup of any given index.
     \end{problem}
     \begin{solution}
         Let us consider $G$ be the group and $H$ be its subgroup such that $[G:H]=n.$ The group acts on the cosets $\{H,g_2H,\dots,g_nH\}=\{1,2,3,\dots,n\}$ and it induces a homomorphism \begin{center}
-            $\varphi_H:G \to S_n$ such that $g\mapsto_{\varphi_H} \sigma_g$.
+            $\varphi_H:G \to S_n$ such that $g\xrightarrow{\varphi_H} \sigma_g$.
         \end{center} Now the stabilizer of the element $H$ in $G/H$ can be identified as $\{g\in G\mid \sigma_g=1\}$ i.e., $\{g\in G \mid gg_iH=g_iH, 1\leq i\leq n\}$ i.e., $H$. We claim that different subgroups $H$ and $H'$ will induce different maps. For $h\in H, h\notin H'$ we have $\varphi_H(h)=1$ but $\varphi_{H'}(h)\neq 1$. Again there are atmost finitely many maps from $G$ to $S_n$ and hence as a result there can exist only finite many subgroups of index $n$.
     \end{solution}
-\end{mdframed}
  
 
 
-\begin{mdframed}
     \begin{problem}
         For primes $p>q>2$, group of order $pq^2$ contains a subgroup of ordre $pq$. 
     \end{problem}
     \begin{solution}
         The number of sylow $p$ subgroup $n_p$ divides $q^2$ as well as $p\mid n_p-1.$ Now $n_p$ is odd if it is equal to $q$ or $q^2$. Since $p$ is also an odd prime we can not have $p\mid n_p-1$ in this case. Thus we must have $n_p=1$ i.e., the sylow$-p$ subgroup, $H$ in $G$ is normal and has order $p$. Now by Cauchy's theorem there exists $b\in G$ of order $q$. Let $K=<b>$. Then $HK$ is the desired subgroup of $G$. 
     \end{solution}
-\end{mdframed}
 
 
 
-\begin{mdframed}
     \begin{problem}
         $SL_n$ is a product of matrices of the form $E_{ij}(a)=I+a\delta_{ij},1\leq i\neq j\leq n$.
     \end{problem}
@@ -141,11 +148,9 @@
         \end{align*}
         For $A\in SL_n$, since not all entries in the first column can be zero we must have $a_{i1}\neq 0$ and $E_{1i}(1)A=(I+\delta_{1i})A=A+$ 
     \end{solution}
-\end{mdframed}
 
 
 
-\begin{mdframed}
     \begin{problem}
         $X$ be a compact metric space with atleast two points and $a\in X$. Then 
         \begin{enumerate}
@@ -162,45 +167,37 @@
             Conversely if $A=X\smallsetminus\{a\}$ is compact then it will be closed in $X$ and we will have $X=A\cup B$, for $B=\{a\}$. Thus $X$ is not connected.
         \end{enumerate}
     \end{solution}
-\end{mdframed}
 
 
 
 
-\begin{mdframed}
     \begin{problem}
         $GL^{+}_n(\bb{R})$ and $GL^{-}_n(\bb{R})$ are homeomorphic.
     \end{problem}
     \begin{solution}
         We can define $\psi: GL^{+}_n(\bb{R})\to GL^{-}_n(\bb{R})$ such that $\psi(M)=AM$, where $A$ is a diagonal matrix such that $a_{11}=-1$ and $a_{ii}=1$ for $1<i\leq n.$ 
     \end{solution}
-\end{mdframed}
 
 
 
-\begin{mdframed}
     \begin{problem}
         Show that the General Linear group with positive determinant, $GL^{+}_n(\bb{R})$ is connected.
     \end{problem}
     \begin{solution}
         We know that $GL^{+}_n(\bb{R})=\det^{-1}((0,\infty))$ and hence it is open. If we can show that this there is some kind of homeomorphism we are through. 
     \end{solution}
-\end{mdframed}
 
 
 
-\begin{mdframed}
     \begin{problem}[Matrix, Topology]
         Show that $SL_2(\bb{R})$ is connected.
     \end{problem}
     \begin{solution}
         Here we will use the fact that the General Linear group with positive determinant, $GL^{+}_n(\bb{R})$ is path connected. With the help of this fact we can define a continous map \[\phi:GL^{+}_n(\bb{R})\to SL_n(\bb{R})\] such that \[\phi(A)=\frac{A}{(\det(A))^{\frac{1}{n}}}.\] Clearly this is a surjection and hence $SL_n(\bb{R})$ is connected.
     \end{solution}
-\end{mdframed}
 
 
 
-\begin{mdframed}
     \begin{problem}
         $f:\bb{R}\to \bb{R}$ is continous. Then show that $f$ is open iff it is strictly monotone.
     \end{problem}
@@ -209,11 +206,9 @@
 
         Conversely WLOG let us assume that $f$ is strictly increasing. It is sufficient to show that $f$ maps open intetrval to open sets. Now, $f$ being continous and strictly increasing implies $f((a,b))=(f(a),f(b)).$
     \end{solution}
-\end{mdframed}
 
 
 
-\begin{mdframed}
     \begin{problem}[Group Theory, Sylow Theorems]
         What is the number of $\sylow-p$ subgroups in $GL_n(\bb{F}_p)$. 
     \end{problem}
@@ -233,11 +228,83 @@
             Let us consider the subspace $V_i=\langle e_1,e_2,\dots,e_i \rangle$. It is clear that $HV_i\subs V_i.$ \textbf{First} we claim that this are the only subspaces such that $HU\subs U.$ If $u=(u_1,u_2,\dots,u_n)^t$ is some basis vector of $U$ with say $u_i\neq 0$. WLOG we can assume $u_i=1$. Now for $j\leq i$ \[ (I+\delta_{ji})u=(u_1,u_2,\dots,u_j+u_i,\dots,u_n)^t.\] Thus $(u_1,u_2,\dots,u_j+u_i,\dots,u_n)-(u_1,u_2,\dots,u_j,\dots,u_n)=(0,0,\dots,u_i,\dots,0)=e_j$ is contained in $U$. Therefore we can conclude that $U=V_j$, where $j$ is largest index such that a basis vector has a nonzero $j$th entry.
 
             Now for any $g\in N_G(H)$ and $h\in H$, $ghg^{-1}\in H.$ Therefore $gh=h'g$ for some $h'\in H.$ Again we claim $hV_i=V_i$ foe each $i$. Since $he_i=(h_{1i},h_{2i},\dots,h_{ni})^t$, $he_1=(h_{1i},0,\dots,0)=e_1$. Again $he_2=(h_{12},1,\dots,0)^t=h_{12}e_1+e_2$ i.e., \[he_2-h(h_{12}e_1)=e_2\in hV_i.\] By this way we have $hV_i=V_i$. Therefore $ghV_i=gV_i=h(gV_i)$ i.e. $h(gV_i)\subs gV_i$ and $H(gV_i)\subs gV_i.$ From our first claim we have $gV_i=V_j$ for some $1\leq j\leq n$. Since $g$ is invertible and it preserves rank we must have $gV_i=V_i$ for each $1\leq i \leq n$. Thus we have $g\in N$ by simple observation.
-
-
-
     \end{solution}
-\end{mdframed}
+
+    \begin{problem}[Compelx Analysis]
+        Find the entire functions $f:\mathbb{C}\to \mathbb{R}.$
+    \end{problem}
+    \begin{solution}
+        If such an entire function $f(z)$ exists then the function $if(z)$ is also entire and so is $\exp^{if(z)}$. This gives us $\mid \exp^{if(z)} \mid=1$ and by Liouville's theorem it is constant. Consequently $f(z)$ must be constant.
+    \end{solution}
+
+\begin{problem}
+    A subgroup $H$ of index 5 in an odd order group $G$ is normal. 
+\end{problem}
+\begin{solution}
+    Since $|G:H|=5$, we get a homomorphism $\vphi : G\to S_5$ and $K=\ker(\vphi)\subs H.$ Thus $|G:K|\geq 5$. The subgroups of odd order in $S_5$ can have order $3,5$ or $15$. Now $|G:K|=5$ implies $H=K$ and hence $H\trianglelefteq G.$ Otherwise $G/K$ is a group of order 15. We know that any subgroup of $S_n$ either contains all even permutations or exactly half of them. If there are exactly half of the elements in $G/K\cong P\subs S_5$ are even permutations then $\sigma:P\to \{1,-1\}$ is a surjection. This gives us $|P:\ker(\sigma)|=2$ i.e., $2\mid |P|$, which is a clear contradiction to the fact that $|G|$ is odd. Thus all the elements in $P$ are even permutations i.e., $G/K\subs A_5$. But $A_5$ has no subgroup of order 15, another contradiction.
+\end{solution}
+
+\begin{problem}
+    Let $G$ be a finite group and $H$ a subgroup of $G$ of prime index $p$. If $\gcd(|G|,p-1)=1$ then $G'\subs H$.
+\end{problem}
+\begin{solution}
+    To be contd...
+\end{solution}
+
+\begin{problem}[Group Theory]
+    A finite simple group $G$ does not have a normal subgroup of index $n$ if $|G|$ does not divide $N!$.
+\end{problem}
+\begin{solution}
+    Let $|G:H|=n$ then we get a homomorphism $\vphi:G\to S_n$ induced by the action of $G$ on the cosets of $H$. Now $K=\ker(\vphi)\subs H$ and is a normal subgroup of $G$. $G$ being a simple group implies that $K=1$ i.e., $G$ is embedded in $S_n$. Thus $G$ can be thought as a subgroup of $S_n$ and hence $|G|\mid n!.$ \\
+    \emph{Consequences-} $A_5$ has no subgroup of order $15$ and $20$ since $15\nmid 24$ and $20\nmid 6.$
+\end{solution}
+
+\begin{problem}[Real Analysis, Continous Functions]
+    Periodic continous function $f:\mathbb{R} \to \mathbb{R}$ is uniformly continous.
+\end{problem}
+\begin{solution}
+    For ease of calculation we will consider the period of $f$ to be $1$. Now $f$ is continous on $[0,2]$ and for given $\epsilon>0$ there exists $\delta>0$ such that whenever $x,y\in [0,2]$ with \begin{center}
+        $|x-y|<\delta$ implies $|f(x)-f(y)|<\epsilon.$
+    \end{center} For any $x,y \in \mathbb{R}$ with $x>y(>0,\ \text{say})$ there exist $n,m\in \mathbb{N}$ such that $x=n+r,y=m+s$ with $0\leq r,s<1$. For $\delta<1$ if $|x-y|<\delta$ we claim that $n=m$ or $n=m+1.$ Otherwise let if possible $n\geq m+2$ then {\allowdisplaybreaks \begin{align*}
+        x-y
+        &= (n+r)-(m-s)\\
+        &\geq 2+(r-s).    
+    \end{align*}}
+     But  $0\leq r<1$ and $0\leq s<1$ give us $-1\leq r-s\leq 1$ i.e., $x-y\geq 2-1=1.$ This contradicts $|x-y|<\delta<1$. Therefore if we choose $\delta'=\min\{\delta,1\}$ then $|f(x)-f(y)|<\epsilon$ whenever $|x-y|\leq \delta'.$
+\end{solution}
+
+\begin{problem}[Topology, Metric Space]
+    The complement of a proper subspace $W$ of $\mathbb{R}^n$ is connected if and only if $\dim(W)\leq n-2$.
+\end{problem}
+\begin{solution}
+    Let us consider a proper subspace $W$ such that $\dim(W)>n-2$, therefore $\dim(W)=n-1$ and $W^{\perp}$ is of dimension 1. If $W^{\perp}=\text{span}\{v\}$ then we can consider the continous function $g:\mathbb{R}^n\to\mathbb{R}$ defined by $f(x)=\langle v,x \rangle$. In this case $f^{-1}(0)=W$ and $f^{-1}(\mathbb{R}\smallsetminus\{0\})=\mathbb{R}^n\smallsetminus W$. Thus we obtain two open sets $A=f^{-1}((0,\infty))$ and $B=f^{-1}((-\infty,0))$ such that $A\cup B=\mathbb{R}^n\smallsetminus W$ i.e., the complement $W$ is not connected. Hence for the complement of a proper subspace of $\mathbb{R}^n$ to be connected we must have $\dim(W)\leq n-2.$ 
+
+    Conversely let us assume that $\dim(W)\leq n-2$. We need to show that $\mathbb{R}^n\smallsetminus W$ is connected. The idea is to project any two vectors $x,y\in \mathbb{R}^n\smallsetminus W$ to $W^{\perp}$, which is path connected. By this we get the path $x\to x'\to y'\to y.$ \[\begin{tikzcd}
+        &&& y \\
+        x \\
+        &&& {y'} \\
+        {x'}
+        \arrow[from=2-1, to=4-1]
+        \arrow[curve={height=18pt}, from=4-1, to=3-4]
+        \arrow[from=3-4, to=1-4]
+    \end{tikzcd}\]
+    Let $\{e_1,e_2,\dots,e_k\}$ is an orthonormal basis for $W$ and $\{e_{k+1},\dots,e_n\}$is an orthonormal basis for $W^{\perp}$. The projection $x'$ of a vector $x=\sum_{i=1}^{n}x_ie_i$ onto $W^{\perp}$ is given by $\sum_{i=k+1}^{n}\langle x,e_i \rangle e_i=\sum_{i=k+1}^{n}x_ie_i.$ We claim that the straight line connecting $x$ and $x'$ lies on $W^c$.
+\end{solution}
+
+\begin{problem}[Complex Analysis]
+    Entire function $f:\mathbb{C}\to \mathbb{C}$ with $\Im(f)>0$ is constant.
+\end{problem}
+\begin{solution}
+    For an entire function $f$, $\exp^{-if(z)}$ is also an entire function and $|\exp^{-if(z)}|=|\exp^{\Im(f)}|$. Similarly $\exp^{if(z)}$ is entire and $|\exp^{if(z)}|=|\exp^{-\Im(f)}|<1.$ Therefore $\exp^{if(z)}$ is constant and so is $f(z)$
+\end{solution}
+
+\newpage
+\begin{problem}[Functional Analysis]
+    Let $X,Y,Z$ are Banach spaces such that $A:X\to Y$ and $B:Y\to Z$ are linear maps. If $BA, B$ are bounded and $B$ is injective then $A$ is also bounded. 
+\end{problem}
+\begin{solution}
+    Let $x_n\to x$ and $A(x_n)\to y$. $B$ being bounded implies $B(A(x_n))\to B(y)$. Moreover $(BA)(x_n)\to (BA)(x)$ and $B$ is injective. Therefore $BA(x)=B(y)$ implies $A(x)=y$ and hence $A$ is a closed map. Hence $A$ is a bounded linear operator.
+\end{solution}
 
 
 \end{document}
