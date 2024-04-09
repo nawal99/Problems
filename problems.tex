@@ -15,7 +15,8 @@
 
 \definecolor{newgreen}{RGB}{0,150,0}
 \definecolor{newtoc}{RGB}{0,51,102} %color definitions
-\definecolor{ngrey}{RGB}{64,64,64}
+\definecolor{newgray}{RGB}{64,64,64}
+\definecolor{newpblm}{RGB}{0,102,0}
 
 \newcommand{\bb}{\mathbb}
 \newcommand{\sylow}{\textit{sylow}}
@@ -25,6 +26,7 @@
 \newcommand{\mfv}{\mathfrak{m}_v}
 \newcommand{\ab}{\mathbb{A}}
 \newcommand{\cbb}{\mathbb{C}}
+\newcommand{\rbb}{\mathbb{R}}
 \newcommand{\pf}{\mathfrak{p}}
 \newcommand{\qf}{\mathfrak{q}}
 \newcommand{\rf}{\mathfrak{r}}
@@ -40,11 +42,11 @@
 \newcommand{\km}{k[X_1,X_2,\dots,X_m]}
 \newcommand{\xn}{X \subseteq \ab_k^n}
 \newcommand{\ym}{X \subseteq \ab_k^m}
+\newcommand{\empz}[1]{{\textcolor{red}{\emph{#1}}}}
 
-
-
+\newenvironment{remark}[1][]{ \begin{mdframed} \textcolor{blue}{Remark.\ } }{\end{mdframed} \vspace{1.5cm} \par}
 \newenvironment{problem}[1][]{\medskip \refstepcounter{section} \noindent  $\S$ 
-{\scshape{\textcolor{newgreen}{Problem \thesection.}}}\def\pnm{#1}\ifstrempty{#1}{}{\ (\textcolor{red}{#1})} \addcontentsline{toc}{subsection}{\scshape{Problem} \thesection.\ }\itshape}{ \smallskip \par}
+{\textcolor{newgreen}{\scshape{Problem \thesection.}}}\def\pnm{#1}\ifstrempty{#1}{}{\ (\textcolor{red}{#1})} \addcontentsline{toc}{subsection}{\scshape{Problem} \thesection.\ }\itshape }{ \smallskip \par}
 
 \newenvironment{solution}[1][]{\smallskip \noindent {\textit{{Solution}.}\ }}{ \noindent \hfill $\square$  \medskip \vspace{1.5cm} \par}
 
@@ -306,5 +308,179 @@
     Let $x_n\to x$ and $A(x_n)\to y$. $B$ being bounded implies $B(A(x_n))\to B(y)$. Moreover $(BA)(x_n)\to (BA)(x)$ and $B$ is injective. Therefore $BA(x)=B(y)$ implies $A(x)=y$ and hence $A$ is a closed map. Hence $A$ is a bounded linear operator.
 \end{solution}
 
+
+\begin{problem}
+    Evaluate the limit \[\pi \lim_{n\to \infty}\frac{\sum_{k=1}^{n} \sin\left(k\frac{\pi}{n}\right)}{n}.\]
+\end{problem}
+\begin{solution}
+    We know that for an integrable function $f:[a,b]\to \mathbb{R}$ \[\int_{a}^{b}f(x)dx= \lim_{n\to \infty} \sum_{k=1}^{n}f(x_k)\Delta x\] where $x_k=a+k\Delta x$ and $\Delta x=\frac{b-a}{n}$. Comparing with the given function with the standard result we get $a=0,\frac{b-a}{n}=\frac{\pi}{n}$ i.e., $b=\pi.$ Thus \begin{align*}
+        \pi \lim_{n\to \infty}\frac{\sum_{k=1}^{n} \sin\left(k\frac{\pi}{n}\right)}{n}
+        &=\lim_{n\to \infty}{\sum_{k=1}^{n} \sin\left(k\frac{\pi}{n}\right)}\frac{\pi}{n}\\
+        &= \int_{0}^{\pi}\sin\left( x\right)dx\\
+        &= {[-\cos x]^{\pi}}_{0}\\
+        &= 2.
+    \end{align*}
+\end{solution}
+
+\begin{problem}[Linear Algebra, Topology]
+    The set of rank two matrices in $M_{2\times 3}$ is open.
+\end{problem}
+\begin{solution}
+    The required set is the inverse image of $\mathbb{R}^3\setminus (0,0,0)$, where $f:M_{2\times 3}\to \mathbb{R}$  is a continous map given by $f(A)=f(A_1,A_2,A_3)=(\det(A_1,A_2),\det(A_2,A_3),\det(A_3,A_1))$. Inverse image of $(0,0,0)$ is the set of all matrices of rank less than or equal to 1. Each $\det(A_i,A_j)$ map is continous because they are polynomials in the entries of $A$. Consequently by \textit{mapping into products}  the map $f$ is continous.
+\end{solution}
+
+\begin{problem}[Linear Algebra, Topology]
+    The orthogonal matrices of size $n\times n$  over $\mathbb{R}$, $\mathcal{O}_n(\mathbb{R})$ is compact. Is $\mathcal{O}_n(\cbb)$ compact?
+\end{problem}
+\begin{solution}
+    For any $A\in \mathcal{O}_n(\mathbb{R})$ we have $AA^T=I_n$. Now $(AA^T)_{ij}=\sum_{j=1}^{n}{a_{ij}}^2$ i.e., for each $i,j$ the term $|a_{ij}|\leq 1$. Thus the elements of the set are bounded above by $n^2$, since \[||A||=\sqrt{\sum_{i=1}^n\sum_{j=1}^{n}{a_{ij}}^2}\leq n^2.\]
+    To show that the given set is infact a closed set in $M_n(\mathbb{R})$ we consider the map $f:M_n(\rbb) \to M_n(\rbb)$ given by $f(A)=AA^T.$ We claim that this map is continous. For a sequence $A_n\to A$ we must have ${a_{ij}}^{(n)}\to a_{ij}$ for each $i,j.$ Therfore \[{f(A_n)=\left(A^{(n)}\left(A^{(n)}\right)^T\right)_{ij}}=\sum_{j=1}{a_{ij}}^{(n)}{a_{ji}}^{(n)}\to \sum_{j=1} a_{ij}a_{ji}=(AA^T)_{ij}.\] Thus $f$ is continous and the inverse image of the closed set $\{I_n\}$(\textit{singleton set in a metric space is closed}) is precisely $\mathcal{O}_n(\rbb)$.
+    
+    To show that $\mathcal{O}_2(\cbb)$ is not compact we need to find an unbounded matrix \[A=\begin{bmatrix}
+        a & b\\
+        c& d
+    \end{bmatrix}\] such that $a^2+b^2=c^2+d^2=1, ac+bd=0$. We can consider $a=i\sqrt{n}=d,b=-c=\sqrt{n+1}.$ In this case we get unbounded matrices in $\mathcal{O}_n(\cbb)$ for $n=1,2,3,\dots$ because \begin{align*}
+        AA^T
+        &=\begin{bmatrix}
+            i\sqrt{n} & \sqrt{n+1}\\
+            -\sqrt{n+1} & i\sqrt{n}
+        \end{bmatrix}
+        \begin{bmatrix}
+            i\sqrt{n} & -\sqrt{n+1}\\
+            \sqrt{n+1} & i\sqrt{n}
+        \end{bmatrix}\\
+        &=\begin{bmatrix}
+            -n+(n+1) & i\sqrt{n^2+n}-i\sqrt{n^2+n}\\
+            -i\sqrt{n^2+n}+i\sqrt{n^2+n} & (n+1)-n
+        \end{bmatrix}\\
+        &=I_n.
+    \end{align*} 
+\end{solution}
+
+\begin{problem}
+    For a finite group $G$ of order $n$ with a subgroup $H$ of order $m$, $\left(\frac{m}{n}\right)!|<2n$ implies $G$ is not simple.
+\end{problem}
+\begin{solution}
+    Let us consider $\vphi:G\to S_{\frac{n}{m}}$ induced by the action of $G$ on the cosets of $H$. Now $K=\ker(\vphi)\trianglelefteq G$. If $K\neq\{1\}$ then $G$ is not simple and we are done. Otherwise $G$ is isomorphic to a subgroup of $S_N,N=\frac{n}{m}.$ By Lagrange's theorem $n\mid N!$, but $N!<2n$ implies $N!=n$ i.e., $G\cong S_N$. Therfore $G$ is not simple as $S_N$ has a normal subgroup $A_N$ for each $N\in \mathbb{N}$.
+\end{solution}
+
+\begin{problem}[Metric Spaces]
+    Let $X,Y$ be topological spaces such that $Y$ is normal. Fruthermore for the function $f:X\to Y$ and for every continous function $\vphi:Y\to \rbb$, $\vphi\circ f$ is continous. Prove that $f$ is continous.
+\end{problem}
+\begin{solution}
+    Let us consider a closed set $C$ in $Y.$ For a point $p\notin f^{-1}(C)$ we consider the two closed sets $\{f(p)\}$ and $C$. By normality of $Y$ and Uryshon's Lemma there exists a continous function $\vphi:Y\to \rbb$ such that $\vphi(f(p))=0$ and $\vphi(c)=0$ for all $c\in C.$ We define $g=\vphi\circ f$. Then $g(p)=0$ and for any $x\in f^{-1}(C)$ the image of $x$ under $g$ is $g(x)=\vphi(f(p))=1$ i.e., $g(f^{-1}(C))=\{1\}.$ Since $Y$ is normal, there exist two disjoint open sets $U$ and $V$ in $\rbb$ such that $\{0\}\subs U$ and $\{1\}\subs V$. Given that $g$ is continous. Hence $U'=g^{-1}(U)$ and $V'=g^{-1}(V)$ are two disjoint open sets in $X$. Clearly $p\in U'$ as $g(p)=0\in U$ and $f^{-1}(C)\subs V'$. Therefore we get a open neighbourhood $U'$ of $p$ such that $U'\cap f^{-1}(C)=\emptyset$ i.e., $\subs X\smallsetminus f^{-1}(C) $. Hence $X\smallsetminus f^{-1}(C)$ is open and the set $f^{-1}(C)$ is closed.
+
+    \begin{center}
+        \begin{tikzcd}
+            \draw (2,0) ellipse (2cm and 3cm);
+            \draw (2,.6) ellipse (.7cm and 1.3 cm) node {f^{-1}(C)};
+            \filldraw[red] (2,-2) circle(1pt) node[anchor=west]{p};
+            \draw[dashed] (2,-2) circle (.4cm);
+            \filldraw (2,-1.5) node {U'};
+            \filldraw (2,2.3) node {V'};
+            \draw[dashed] (2,.6) ellipse (1cm and 1.6 cm);
+    
+            \draw (7,0) ellipse (2cm and 2.5cm);
+            \draw (7,1) ellipse (1cm and 1.2cm) node {C};
+    
+    
+            \draw (12,0) ellipse (2cm and 3cm);
+            \draw[dashed] (12,1) circle (.7cm);
+            \draw[dashed] (12,-1) circle (.7cm);  
+            \filldraw[black] (12,1.8) node {V};
+            \filldraw[black] (12,-.2) node {U};
+            \filldraw[blue] (12,1) circle(1pt) node [anchor=south]{1};
+            \filldraw[blue] (12,-1) circle(1pt) node [anchor=south]{0};
+    
+            \draw[dashed] (2,-2) .. controls (5.5,-4) and (7,-4) .. (12,-1);
+            \draw (6,-4) node {g=\vphi\circ f};
+        \end{tikzcd}
+    \end{center}
+\end{solution}
+
+\begin{problem}[Metric Spaces]
+    Let $X,Y$ and $Z$ are metric spaces, $f:X\to Y$ is a continous onto map and $g:Y\to Z$ is such that $g\circ f$ is continous. If $X$ is compact prove that $g$ is also a continous map.
+\end{problem}
+\begin{solution}
+    Let us consider a closed set $C$ in $Z$. Now $(g\circ f)^{-1}(C)$ is closed in $X$ and hence compact. $f$ being a continous map implies $f((g\circ f)^{-1}(C))$ is compact in $Y$ and hence a closed subset of $Y$. 
+    
+    We claim that $g^{-1}(C)=f((g\circ f)^{-1}(C))$. For any $y\in g^{-1}(C)\subs Y$ there exists $x$ in $X$ such that $f(x)=y$ because $f$ is onto. Now $g(y)\in C$ i.e., $g(f(x))\in C$. Thus $x\in (g\circ f)^{-1}(C)$ and hence $y=f(x) \in f((g\circ f)^{-1}(C)).$ Conversely for $w\in f((g\circ f)^{-1}(C))$, there exists $u\in (g\circ f)^{-1}(C)$ such that $f(u)=w.$ Now $(g\circ f)(u)\in C$ implies $f(u)\in g^{-1}(C)$ i.e., $w\in g^{-1}(C)$
+\end{solution}
+
+\begin{problem}
+    Let $\{a_i:i\in \rbb\}$ is a set of non negative real numbers in $\rbb.$ If $\sup\{\sum_{i\in F}a_i \mid F\subs \rbb, |F|<\infty \}$ is finite. Show that except for countably many $a_i$'s rest all are zero. Also show that the the 'countably' can not be replaces by 'finite'. 
+\end{problem}
+\begin{solution}
+    Let $F_n=\left\{i\in \rbb\mid a_i\geq \frac{1}{n}\right\}$ and $F_0=\cup_{n} F_n=\{i \in \rbb \mid a_i\neq 0\}.$ Now each of the $F_n$ must be finite, Otherwise for some $N_0$ and each $N\in \mathbb{N}$ \[\sup\left\{\sum_{i\in F}a_i \mid F\subs \rbb, |F|<\infty \right\} \geq \sup\left\{\sum_{i\in F}a_i \mid F\subs F_{N_0}, |F|<\infty \right\}\geq \frac{N}{N_0 }.\] As $N\to \infty$ the supremum becomes unbounded.
+
+    $a_i=\frac{1}{i^2}$ for $i\in \mathbb{N}$ and zero at other points satisfies the above condition.
+\end{solution}
+
+\begin{problem}
+    If $f:\{z\in \cbb\mid |z|>1\}$ is defined by $f(z)=\frac{1}{z}$, show that there does not exist any entire function $g$ such that $g=f$ on $|z|>1.$
+\end{problem}
+\begin{proof}
+    If such a function exists, for $|z|>1$ it will be bounded above by $1$. Also on the comapct set $|z|\leq 1$ it will again be bounded. Thus $g$ is an entire bounded function and hence constant by Liouville's theorem. This a contradiction to the assumption that $g(z)=\frac{1}{z}$ for $|z|>1.$
+\end{proof}
+
+
+\begin{problem}
+    Any entire function $f$ is either a polynomial or it has an essential singularity at $\infty$.
+\end{problem}
+\begin{solution}
+    Let us conisder the taylor series expansion of $f$ about $0$. If it terminated after finite terms we are done. Otherwise $g(z)=f\left\{ \frac{1}{z}\right\}$ will have an essential singularity at zero i.e., $f$ will have an essential singularity at $\infty.$
+\end{solution}
+
+\begin{remark}
+    All non-constant functions that are analytic everywhere in the complex plane, $\cbb$ must be unbounded at $\infty$ and hence have a singularity at $\infty.$
+\end{remark}
+
+\begin{problem}
+    Does there exist a continous surjection from $[0,1)$ onto $\rbb?$
+\end{problem}
+\begin{solution}
+    Yes, $f(x)=x\sin x.$
+\end{solution}
+
+\begin{problem}[Real Analysis, Integration]
+    $f:\rbb \to \rbb$ is such that $\int_{-\infty}^{\infty}f<\infty$. Then show that the function $F(x)=\int_{-\infty}^{x}f(t)dt$ is uniformly continous.
+\end{problem}
+\begin{solution}
+    Let us conisder $\int_{-\infty}^{\infty}f(x)dx=M<\infty$. For any $x>a$, \begin{align*}
+        |F(x)-F(a)|
+        &= \left| \int_{-\infty}^{x}f(t)dt -\int_{-\infty}^{a}f(t)dt \right|\\
+        &=\left| \int_{a}^{x}f(t)dt \right|\\
+        &\leq \int_{a}^{x}|f(t)|dt.
+    \end{align*}
+    Now $M=sup\{|f(t)| \mid {t\in[a,x]} \}$ is bounded becuase $wefwm$
+\end{solution}
+
+\begin{problem}[Topology, Compactness]
+    Let $X$ be a topological space and $f:X\to[0,1]$ is a closed continous surjection and for each $a\in [0,1]$, $f^{-1}(a)$ is compact in $X$. Prove or disprove that $X$ is compact.
+\end{problem}
+\begin{solution}
+    For any $a\in [0,1]$ and any nbd $U$ containing $f^{-1}(a)$ we claim that there exists an open nbd $W$ of $a$ such that $f^{-1}(W)\subs U$. Because $f(X\smallsetminus U)$ is closed in $[0,1]$ and hence $W=[0,1]\setminus f(X\setminus U)$ is a open set. For any $y\in f^{-1}(W)$, $f(y)\in [0,1]\setminus f(X\setminus U)$. Thus $f(y)\notin f(X\setminus U)$ and hence $y\notin X\setminus U$. This implies $y\in U.$
+
+    Now $\{U_i\}$ be an open cover for $X$. For each $a\in [0,1]$ there exists an open set $U_a$ from the open cover such that $f^{-1}(a)\in U_a$. Thus we obtain a open nbd $W_a$ of $a$ such that \empz{$f^{-1}(W_a)\subs U_a.$} The collection of open sets $\{W_a\mid a\in [0,1]\}$ forms an open cover for $[0,1]$. Since $[0,1]$ is compact we have \empz{$\bigcup_{i=1}^{n} W_{a_i}=[0,1]$}. But $f$ is a surjection implies $f^{-1}\left(\bigcup_{i=1}^{n} W_{a_i}\right)=X.$ Thus \empz{$\bigcup_{i=1}^{n} f^{-1}(W_{a_i})=X$} and hence $\bigcup_{i=1}^{n} U_{a_i}=X.$  
+\end{solution}
+
+\begin{problem}[Topology, Normal Spaces]
+    Let $f:X\to Y$ is a closed, continous, surjective map between two topological spaces. If $X$ is normal prove that $Y$ is also normal.
+\end{problem}
+\begin{solution}
+    For any two disjoint closed sets $C,D$ in $Y$, the sets $A=f^{-1}(C),B=f^{-1}(D)$ are also closed in $X$. Moreover they are disjoint becuase $x\in f^{-1}(C)\cap f^{-1}(D)$ implies $f(x)\in C\cap D.$ $X$ being normal gives us two disjoint open sets $U,V$ such that $A\subs U, B\subs V$. Now the sets $X\setminus U,X\setminus V$ are closed in $X$ and so are $U'=f(X\setminus U)$ and $V'=f(X\setminus V)$ in $Y$ because $f$ is a closed map.
+    
+    We claim that $Y\setminus U',Y\setminus V'$ are disjoint open sets and $C\subs Y\setminus U', D\subs Y\setminus V'.$ The fact that they are open is straight foreward. Now \[(Y\setminus U')\cap (Y\setminus V')= Y\setminus(U'\cup V') = Y \setminus (f(X\setminus U) \cup f(X\setminus V)).\]
+    But for any $f(x)=y\in Y$, $x\in U\cap V$ since $U\cap V=\phi.$ i.e., $x\in X\setminus U$ or $x\in X\setminus V.$ Thus $f(x)=y\in f(X\setminus U)\cup f(X\setminus V)$, which means $Y=f(X\setminus U)\cup f(X\setminus V).$ Therefore the sets $Y\setminus U'$ and $Y\setminus V'$ are disjoint open sets.
+
+    Our proof will be complete if we can show that $C\subs Y\setminus U'$ and $D\subs Y\setminus V'.$ For $c\in C,$ there exists $a\in A=f^{-1}(C)$ such that $f(a)=c\in C$ i.e., $a\in A\subs U$. If $c\notin Y\setminus f(X\setminus U)$, $c\in f(X\setminus U)$. There will be some $a'\in X\setminus U$ such that $f(a')=c.$ This is a contradiction since $f^{-1}(C)\subs U.$
+\end{solution}
+
+\begin{problem}[Group Theory]
+    Let $G$ be a group with the property that for some $a\in G$, $H=G\setminus \{a\}$ is a subgroup of $G$. Prove that $|G|=2.$
+\end{problem}
+\begin{solution}
+    For any $b\in H$, $ab\notin H$. Otherwise $a=(ab)b^{-1}\in H.$ Thus for each $b\in H,$ $ab=a$ i.e., $b=1$. Since $H$ is a subgroup $a\neq 1.$ Thus there are only two elements in $G$, namely $1$ and $a.$ 
+\end{solution}
 
 \end{document}

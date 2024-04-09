@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.6)  6 APR 2024 00:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.6)  9 APR 2024 16:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1016,36 +1016,36 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 ) (problems.aux)
 \openout1 = `problems.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 61.
-LaTeX Font Info:    Trying to load font information for MDA+cmr on input line 61.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 63.
+LaTeX Font Info:    Trying to load font information for MDA+cmr on input line 63.
  (C:\Users\nkh79\AppData\Local\Programs\MiKTeX\tex/latex/mathdesign\mdacmr.fd
 File: mdacmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 61.
-LaTeX Font Info:    Trying to load font information for MDB+cmr on input line 61.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 63.
+LaTeX Font Info:    Trying to load font information for MDB+cmr on input line 63.
  (C:\Users\nkh79\AppData\Local\Programs\MiKTeX\tex/latex/mathdesign\mdbcmr.fd
 File: mdbcmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    ... okay on input line 63.
  (C:\Users\nkh79\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count338
@@ -1099,28 +1099,28 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 61.
+Package hyperref Info: Link coloring ON on input line 63.
 (problems.out) (problems.out)
 \@outlinefile=\write4
 \openout4 = `problems.out'.
 
 
 
-Package mathdesign/mdbch Warning: Package 'amssymb' shouldn't be used in conjonction with package mdbch, on input line 61.
+Package mathdesign/mdbch Warning: Package 'amssymb' shouldn't be used in conjonction with package mdbch, on input line 63.
 
 
-Package mathdesign/mdbch Warning: Package 'amsfonts' shouldn't be used in conjonction with package mdbch, on input line 61.
+Package mathdesign/mdbch Warning: Package 'amsfonts' shouldn't be used in conjonction with package mdbch, on input line 63.
 
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 16.58891pt on input line 66.
+(Font)              scaled to size 16.58891pt on input line 68.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 67.
+(Font)              scaled to size 11.52008pt on input line 69.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 72.
+(Font)              scaled to size 10.51207pt on input line 74.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 13.82408pt on input line 72.
+(Font)              scaled to size 13.82408pt on input line 74.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 13.82408pt on input line 77.
+(Font)              scaled to size 13.82408pt on input line 79.
 (problems.toc
 LaTeX Font Info:    Font shape `T1/mdbch/m/fsc' will be
 (Font)              scaled to size 10.51207pt on input line 1.
@@ -1204,36 +1204,40 @@ LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
 
 {C:/Users/nkh79/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/ly1/texnansi.enc}]
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 10.51207pt on input line 83.
+(Font)              scaled to size 10.51207pt on input line 85.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 88.
+(Font)              scaled to size 7.68005pt on input line 90.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 88.
+(Font)              scaled to size 5.76004pt on input line 90.
  [2] [3]
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 7.68005pt on input line 213.
+(Font)              scaled to size 7.68005pt on input line 215.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 5.76004pt on input line 213.
- [4] [5] [6] [7] [8] (problems.aux)
+(Font)              scaled to size 5.76004pt on input line 215.
+ [4] [5] [6] [7] [8] [9] [10]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 435.
+ [11] [12] [13] (problems.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
 Package rerunfilecheck Info: File `problems.out' has not changed.
-(rerunfilecheck)             Checksum: CB6246766D37E605446EC45151600A6A;2157.
+(rerunfilecheck)             Checksum: 42767E32BFD7D9B5528AA7770F07C7E8;3711.
  ) 
 Here is how much of TeX's memory you used:
- 29177 strings out of 475551
- 572388 string characters out of 5762555
- 1934238 words of memory out of 5000000
- 49786 multiletter control sequences out of 15000+600000
- 605544 words of font info for 109 fonts, out of 8000000 for 9000
+ 29241 strings out of 475551
+ 573287 string characters out of 5762555
+ 1936238 words of memory out of 5000000
+ 49830 multiletter control sequences out of 15000+600000
+ 605794 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,15n,117p,833b,1015s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr7t.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr7v.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr7y.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdbch/md-chri7m.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdbch/md-chri8t.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdbch/md-chrma.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdbch/md-chrmb.pfb>
-Output written on problems.pdf (8 pages, 116777 bytes).
+ 113i,15n,117p,1001b,1077s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr7m.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr7t.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr7v.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr7y.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdbch/md-chri7m.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdbch/md-chri8t.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdbch/md-chrma.pfb><C:/Users/nkh79/AppData/Local/Programs/MiKTeX/fonts/type1/mathdesign/mdbch/md-chrmb.pfb>
+Output written on problems.pdf (13 pages, 155383 bytes).
 PDF statistics:
- 206 PDF objects out of 1000 (max. 8388607)
- 33 named destinations out of 1000 (max. 500000)
- 173 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 307 PDF objects out of 1000 (max. 8388607)
+ 52 named destinations out of 1000 (max. 500000)
+ 285 words of extra memory for PDF output out of 10000 (max. 10000000)
 
